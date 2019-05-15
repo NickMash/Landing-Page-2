@@ -1,0 +1,279 @@
+html {
+  overflow-x: hidden;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+
+  /*в background первая урл на картинку, это будет наша картинка с анимацией,
+   а вторая картинка, наш статический фон, которому мы еще
+   зададим дополнительные стили */
+  background: url(../images/Landing-page_2_Background_3D_City.jpg) fixed;
+  /*Далее мы масштабируем фон. */
+
+    background-size: cover;
+
+
+    /*Задаем параметры анимации : название, скорость анимации, согласно какой функции
+   времени должна происходить анимация каждого цикла между ключевыми кадрами,
+   и устанавливаем бесконечный повтор анимации*/
+
+  animation: bgAnim 33000s linear infinite;
+}
+
+/*Дальше устанавливает правило для ключевых кадров*/
+
+@keyframes bgAnim {
+  from {
+    background-position: 0px 0%, center center;
+  }
+  to {
+    background-position: -690000px 0%, center center;
+  }
+}
+a {
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+.main-container {
+    width: 1100px;
+    margin: 0 auto;
+    background-color: rgba(95, 95, 95, 0.5);
+    box-shadow: 0 0 17px #666; /* Параметры тени */
+    border-radius: 10px; /* Радиус скругления */
+}
+.headline-content {
+  width: 1100px;
+  margin: 0 auto;
+  display: block;
+  color: #880050;
+    }
+.left-hedline {
+  width: 75%;
+  display: inline-block;
+  font-weight: bold;
+}
+.links-to-social-networks {
+  width: 24.5%;
+  text-align: right;
+  display: inline-block;
+}
+.links-to-social-networks .social-networks-icons {
+  display: inline;
+  width: 22px;
+  height: 22px;
+    border-radius: 5px; /* Радиус скругления */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.links-to-social-networks .social-networks-icons:hover {
+  width: 25px;
+  height: 25px;
+}
+.navigation-menu {
+  width: 1094px;
+  margin: 0 auto;
+  background-color: #c7c7c3;
+  display: block;
+  text-align: center;
+  font-family: Arial;
+  border: 3px solid lightgrey;
+}
+.navigation-sidebar .link-to-navigation {
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.navigation-menu .link-to-navigation:hover {
+  background-color: #880050;
+  color: white;
+}
+.navigation-menu .link-to-navigation {
+  display: table-cell;
+  vertical-align: middle;
+  width: 275px;
+  height: 25px;
+  color: #880050;
+  text-decoration: none;
+  border-left: 2px solid #999999;
+  }
+.navigation-menu .link-to-navigation:first-child {
+  border-left: none;
+}
+.indent {
+  font-size: smaller;
+}
+
+.slider-container {
+  background-image: url(../images/Slider_background.jpg); /* Путь к фоновому изображению */
+  width: 1100px;
+  height: 506px;
+  margin: 0 auto;
+  background-size: 1100px auto;
+  box-sizing: border-box;
+  padding-right: 10px;
+  padding-top: 120px;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s;
+}
+.slider-button[type=button] {
+  background-image: url(../images/Slider_button.png);
+  opacity: 0.3; /*Прозрачность 30%*/
+  background-size: 90px auto;
+  border: none; /*граница по умолчанию отсутствует*/
+  outline: none; /*граница при нажатии отсутствует*/
+  cursor: pointer;
+  width: 90px;
+  height: 27px;
+  border-radius: 40px;
+  margin-top: 345px;
+  float: right;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.slider-button:hover {
+  opacity: 0.9;
+}
+.spinning-button {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  float:right; /* Делает выравнивание по правому краю по умолчанию*/
+  background: url(../images/Spinning_button.png) center center;
+  background-size: auto 300px;
+  border-radius: 300px; /* Радиус скругления */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.spinning-link {
+  color: #00ffe0;
+}
+.spinning-button:hover {
+  text-decoration: underline;
+  background-size: auto 360px;
+  transform: rotate(90deg);
+  width	: 360px;
+  height: 360px;
+}
+.spinning-headline {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 250%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+
+}
+.spinning-headline:hover {
+  transform: rotate(-90deg);
+  width		: 360px;
+  height: 360px;
+  margin: 0 auto;
+  font-size: 280%;
+  font-weight: bold;
+}
+.articles-container {
+  width:1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.left-article{
+  float:left;
+  width:355px;
+  display:inline-block;
+}
+.center-article{
+  float:left;margin:0 15px;
+  /*отступы слева и справа по 15px*/
+  width:355px;
+  display:inline-block;
+}
+.right-article{
+  width:355px;
+  display:inline-block;
+}
+.headline-left-article{
+  top		: 68%;
+  left		: 26%;
+  width: 360px;
+  margin-top: 3%;
+  display:inline-block;
+  word-wrap: break-word;
+  background: rgba(0,0,0,0.6);
+  }
+.headline-center-article{
+  top		: 68%;
+  left		: 42%;
+  width: 360px;
+  margin-top: 3%;
+  display:inline-block;
+  word-wrap: break-word;
+  background: rgba(0,0,0,0.6);
+}
+.headline-right-article{
+  top		: 68%;
+  left		: 58%;
+  width: 360px;
+  margin-top: 3%;
+  display:inline-block;
+  word-wrap: break-word;
+  background: rgba(0,0,0,0.6);
+}
+.link-articles {
+  color: white;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: 0.2s;
+}
+.link-articles:hover {
+  text-decoration: underline;
+  font-size: larger;
+}
+.background-left-article {
+  background-image: url(../images/Left_article.jpg) ;
+  width: 360px;
+  height: 181px;
+  background-size: 360px 181px;
+  box-sizing: border-box;
+}
+.background-center-article {
+  background-image: url(../images/Center_article.png) ;
+  width: 360px;
+  height: 181px;
+  background-size: 360px 181px;
+  box-sizing: border-box;
+}
+.background-right-article {
+  background-image: url(../images/Right_article.jpg) ;
+  width: 360px;
+  height: 181px;
+  background-size: 360px 181px;
+  box-sizing: border-box;
+}
+.articles-content .link-to-info {
+  color: black;
+}
+.articles-content .link-to-info:hover {
+  text-decoration: underline;
+}
+
