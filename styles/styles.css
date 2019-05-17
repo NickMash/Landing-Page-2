@@ -51,12 +51,32 @@ a {
   color: #880050;
     }
 .left-hedline {
-  width: 75%;
+  width: 35%;
   display: inline-block;
   font-weight: bold;
 }
+.forms {
+  display: inline-block;
+  width: 55%;
+}
+.Login-button {
+  opacity: 0.7;
+  float: right;
+  width: 70px;
+  height: 22px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.Login-button .Login-button-icon {
+  border-radius: 40px;
+}
+.Login-button:hover {
+  opacity: 1.0;
+}
 .links-to-social-networks {
-  width: 24.5%;
+  width:9%;
   text-align: right;
   display: inline-block;
 }
@@ -126,7 +146,7 @@ a {
 }
 .slider-button[type=button] {
   background-image: url(../images/Slider_button.png);
-  opacity: 0.3; /*Прозрачность 30%*/
+  opacity: 0.6; /*Прозрачность 30%*/
   background-size: 90px auto;
   border: none; /*граница по умолчанию отсутствует*/
   outline: none; /*граница при нажатии отсутствует*/
@@ -142,7 +162,7 @@ a {
   transition: 0.5s;
 }
 .slider-button:hover {
-  opacity: 0.9;
+  opacity: 1.0;
 }
 .spinning-button {
   width: 300px;
