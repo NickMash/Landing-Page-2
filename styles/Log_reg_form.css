@@ -1,5 +1,5 @@
 .login-form {
-    width: 450px;
+    width: 368px;
     margin: 0 auto;
 }
 .headline {
@@ -9,13 +9,27 @@
     margin-bottom: 8px;
     overflow: hidden;
 }
-.text-field {
-    float: right;
+.country-sel {
+    height:30px;
+    width: 368px;
+    margin-bottom: 8px;
+}
+.field-select {
     height: 29px;
     line-height: 19px;
     margin: 0;
     padding: 0 5px;
-    width: 287px;
+    width: 100%;
+    border: 1px solid #ABADB3;
+    font-size: larger;
+}
+.text-field {
+
+    height: 29px;
+    line-height: 19px;
+    margin: 0;
+    padding: 0 5px;
+    width: 354px;
     border: 1px solid #ABADB3;
     font-size: larger;
 }
@@ -23,29 +37,38 @@
     font-size: x-large;
 }
 .check-mark {
-    margin-left: 23px;
     width: 29px;
     cursor: pointer;
     transform: scale(1.5);
 }
 .registration-login {
-    width: 450px;
+    width: 368px;
     height: 30px;
 }
-.buttons {
+.buttons-submit {
     display: inline-block;
-    width: 222px;
+    width: 47%;
     height: 30px;
     text-align: center;
     vertical-align: middle;
     margin: 0 auto;
 }
+.buttons-login {
+    display: inline-block;
+    width: 47%;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    float: right;
+}
 .log-sub-link {
     display: block;
-    width: 222px;
+    width: 175px;
     height: 30px;
-    background: url(../images/Log_reg_button.png) no-repeat;
-    background-size: 222px 30px;
+/*    background: url(../images/Log_reg_button.png) no-repeat;*/
+    background-color: slateblue;
+    background-size: 175px 30px;
     border: none; /*граница по умолчанию отсутствует*/
     outline: none; /*граница при нажатии отсутствует*/
     font-family: Arial;
@@ -53,16 +76,33 @@
     font-size: 20px;
     cursor: pointer;
 }
+.log-sub-link:disabled,
+.log-sub-link[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
 .reg-log-link {
-    background: url(../images/Log_reg_button.png) no-repeat;
-    background-size: 222px 30px;
+/*    background: url(../images/Log_reg_button.png) no-repeat;*/
+    background-color: slateblue;
+    background-size: 175px 30px;
     display: table-cell;
     vertical-align: middle;
     text-decoration: none;
-    width: 222px;
+    width: 175px;
     height: 30px;
     font-family: Arial;
     color: white;
     font-size: 20px;
     cursor: pointer;
+}
+.notice {
+/*    display: none;   */
+    color: blue;
+
+}
+
+.notice-display {
+/*    display: block;   */
+    color: red;
 }
