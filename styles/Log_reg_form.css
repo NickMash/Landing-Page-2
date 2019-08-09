@@ -97,12 +97,9 @@
     cursor: pointer;
 }
 .notice {
-/*    display: none;   */
-    color: blue;
-
+   display: none;
 }
 
 .notice-display {
-/*    display: block;   */
-    color: red;
+   display: block;
 }
