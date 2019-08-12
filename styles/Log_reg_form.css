@@ -101,5 +101,5 @@
 }
 
 .notice-display {
-   display: block;
+   display: inline-block;
 }

@@ -13,8 +13,23 @@ function check() {
 }
 
 function valid () {
+    var inputs = document.getElementsByClassName('forJsCheck');
+    var p = document.getElementsByClassName('notice');
+    let patterns = [/^[a-zA-Z]+([-_]?[a-zA-Z0-9]+){0,2}$/i , /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/ , /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/ , /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i , /^[+]{1}[0-9]{12}$/];
     //REfACTOR !!!!!!
-    var form = document.getElementById('registrationForm');
+    for (var i = 0; i < inputs.length-3; i++) {
+        if (patterns[i].test(inputs[i].value) === false) {
+            p[i].classList.add('notice-display');
+            console.log(patterns[i].test(inputs[i].value))
+        }
+
+
+        else {
+          p[i].classList.remove('notice-display')
+        }
+    }
+}
+ /*   var form = document.getElementById('registrationForm');
     var login = form.login.value;
     var pd = form.pd.value;
     var cpd = form.cpd.value;
@@ -22,15 +37,8 @@ function valid () {
     var phone = form.phone.value;
     var adr_pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     var phone_pattern = /^[+]{1}[0-9]{12}$/;
-    var pd_pattern = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}/g;
+    var pd_pattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/;
     var login_pattern = /^[a-zA-Z]+([-_]?[a-zA-Z0-9]+){0,2}$/i;
-
-
-    if (login_pattern.test(login) === false)
-        document.getElementById("appear-login-notice").classList.add('notice-display');
-
-    else if (login_pattern.test(login) === true)
-        document.getElementById("appear-login-notice").classList.remove('notice-display');
 
 
 
@@ -39,6 +47,14 @@ function valid () {
 
     else if (pd_pattern.test(pd) === true)
         document.getElementById("appear-password-notice").classList.remove('notice-display');
+
+
+
+    if (login_pattern.test(login) === false)
+        document.getElementById("appear-login-notice").classList.add('notice-display');
+
+    else if (login_pattern.test(login) === true)
+        document.getElementById("appear-login-notice").classList.remove('notice-display');
 
 
 
@@ -64,8 +80,8 @@ function valid () {
    else if (phone_pattern.test(phone) === true)
        document.getElementById("appear-phone-notice").classList.remove('notice-display');
 
-}
-
+ }
+*/
 
 var elements = document.getElementsByClassName('forJsCheck');
 var submit = document.getElementById('submit');
