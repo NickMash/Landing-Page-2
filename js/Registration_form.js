@@ -1,5 +1,5 @@
 function check() {
-    var inputs = document.getElementsByClassName('forJsCheck');
+    var inputs = document.getElementsByClassName('for-js-check');
     for(var i = 0; i < inputs.length; i++) {
         if (inputs[i].value &&
             (document.getElementById('form-male').checked || document.getElementById('form-female').checked) &&
@@ -13,19 +13,19 @@ function check() {
 }
 
 function valid () {
-    var inputs = document.getElementsByClassName('forJsCheck');
+    var inputs = document.getElementsByClassName('for-js-check');
     var p = document.getElementsByClassName('notice');
     let patterns = [/^[a-zA-Z]+([-_]?[a-zA-Z0-9]+){0,2}$/i , /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/ , /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/ , /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i , /^[+]{1}[0-9]{12}$/];
     //REfACTOR !!!!!!
     for (var i = 0; i < inputs.length-3; i++) {
         if (patterns[i].test(inputs[i].value) === false) {
             p[i].classList.add('notice-display');
-            console.log(patterns[i].test(inputs[i].value))
+            inputs[i].classList.add('checking-mistake');
         }
 
-
         else {
-          p[i].classList.remove('notice-display')
+          p[i].classList.remove('notice-display');
+          inputs[i].classList.remove('checking-mistake');
         }
     }
 }
@@ -83,7 +83,7 @@ function valid () {
  }
 */
 
-var elements = document.getElementsByClassName('forJsCheck');
+var elements = document.getElementsByClassName('for-js-check');
 var submit = document.getElementById('submit');
 
 submit.addEventListener('click', function () {
